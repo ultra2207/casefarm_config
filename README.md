@@ -1,2 +1,2 @@
-# casefarm_config
-Configuration files for casefarm.
+# CaseFarm configuration
+Configuration files for CaseFarm.
