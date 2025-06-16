@@ -1,0 +1,88 @@
+[project]
+name = "casefarm"
+version = "0.2.2"
+description = "A fully comprehensive software that covers all aspects of CS2 case farming."
+readme = "README.md"
+requires-python = ">=3.13,<3.13.3"
+# update the python version by updating the requires-python and running: uv venv -p 3.13.2 --allow-existing
+
+dependencies = [
+  "torch",
+  "torchvision",
+  "torchaudio",
+  "aiohttp",
+  "aiosteampy",
+  "customtkinter",
+  "easyocr",
+  "mss",
+  "numpy",
+  "ortools",
+  "playwright",
+  "plotly",
+  "psutil",
+  "pyautogui",
+  "pygetwindow",
+  "pyperclip",
+  "python-levenshtein",
+  "pywinauto",
+  "requests",
+  "steam-totp",
+  "tqdm",
+  "steamguard",
+  "steamio",
+  "fastapi",
+  "uvicorn",
+  "pydantic",
+  "cheesechaser",
+  "opencv-python",
+  "pillow",
+  "infi-systray",
+  "pyright",
+  "ruff",
+  "pycountry",
+  "fake-useragent",
+  "codespell",
+  "mkdocs-material",
+  "ipywidgets",
+  "uv",
+  "pystray",
+  "aiofiles",
+  "prophet",
+  "nbformat",
+  "viztracer>=1.0.4",
+  "loguru>=0.7.3",
+  "httpx>=0.28.1",
+  "pyyaml>=6.0.2",
+  "frozenlist==1.6.0",
+  "temporalio>=1.12.0",
+  "statsforecast>=2.0.1",
+  "darts>=0.35.0",
+  "scipy==1.15.2",
+  "dataclasses",
+  "sqlmodel>=0.0.24",
+  "dataclasses-json>=0.6.7",
+]
+
+[tool.uv]
+# Allow pre-release versions for all packages
+prerelease = "allow"
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cu128" },
+]
+torchvision = [
+    { index = "pytorch-cu128" },
+]
+torchaudio = [
+    { index = "pytorch-cu128" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.codespell]
+skip = "*.po,*.ts,*.json,*.html,*.lock,*/.*/*,node_modules,executables,src-tauri,build,assets,*.js,*.tsx"
+ignore-words-list = "IST,ist,mape"
